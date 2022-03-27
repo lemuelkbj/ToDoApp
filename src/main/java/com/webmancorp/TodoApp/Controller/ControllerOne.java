@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webmancorp.TodoApp.Entities.ToDoTask;
@@ -23,5 +24,10 @@ public class ControllerOne {
 	@GetMapping("/getTasks")
 	public List<ToDoTask> getTasks(){
 		return this.obj.getTasks();
+	}
+	
+	@GetMapping("/getTasks/{priority}")
+	public List<ToDoTask> getPriority(@PathVariable String priority) {
+		return this.obj.getPriority(priority);
 	}
 }
