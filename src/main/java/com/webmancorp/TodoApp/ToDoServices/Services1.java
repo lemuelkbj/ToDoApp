@@ -8,4 +8,6 @@ public interface Services1 {
 
 	public List<ToDoTask> getTasks();
 
+	public List<ToDoTask> getPriority(String priority);
+
 }
