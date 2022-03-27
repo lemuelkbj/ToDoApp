@@ -30,10 +30,16 @@ public class TodoServicesImplementation implements Services1 {
 		ArrayList<ToDoTask> task = new ArrayList<ToDoTask>();
 		for (ToDoTask n : TodoList) {
 			if (priority.matches(n.getTaskPriority())) {
-				task.add(n);
+				task.add(n); 
 			}
 		}
 		return task;
+	}
+
+	@Override
+	public List<ToDoTask> addTasks(ToDoTask task) {
+		TodoList.add(task);
+		return TodoList;
 	}
 
 }

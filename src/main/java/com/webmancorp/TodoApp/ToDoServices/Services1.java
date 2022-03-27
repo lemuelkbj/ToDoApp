@@ -10,4 +10,6 @@ public interface Services1 {
 
 	public List<ToDoTask> getPriority(String priority);
 
+	public List<ToDoTask> addTasks(ToDoTask task);
+
 }
